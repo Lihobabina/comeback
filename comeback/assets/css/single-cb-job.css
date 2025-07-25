@@ -1,0 +1,296 @@
+.cb-single-hero{
+    background-color: #040308;
+    padding: 220px 16px 120px 16px;
+    position: relative;
+}
+.cb-single-hero .cb-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.cb-single-hero-title{
+font-family: 'Rethink Sans';
+font-weight: 700;
+font-size: 100px;
+line-height: 120%;
+text-align: left;
+text-transform: capitalize;
+color: #FFFFFF;
+width: 86%;
+}
+.cb-single-hero-subtitle{
+font-family: 'Rethink Sans';
+font-weight: 700;
+font-size: 28px;
+line-height: 120%;
+color: #FFFFFF;
+white-space: nowrap;
+}
+.cb-single-hero-image-bottom{
+    position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: none;
+  z-index: 3;
+  pointer-events: none;
+}
+.cb-single-hero-image-bottom img{
+    width: 100%;
+}
+.cb-single-section{
+    padding: 190px 16px;
+  background: #f7f7f7;
+  position: relative;
+}
+.cb-single-section .cb-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 64px;
+}
+.cb-single-section .cb-single-left{
+    max-width: 744px;
+    width: 100%;
+}
+.cb-single-left-title{
+font-family: 'Rethink Sans';
+font-weight: 500;
+font-size: 64px;
+line-height: 120%;
+color: #161616;
+margin-bottom: 16px;
+}
+.cb-single-description p{
+    font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+color: #161616;
+opacity: 0.6;
+margin-bottom: 32px;
+}
+.cb-single-description p:last-of-type{
+    margin-bottom: 40px;
+}
+.cb-single-description h2{
+font-family: 'Urbanist';
+font-weight: 500;
+font-size: 24px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: capitalize;
+color: #0D0012;
+margin-bottom: 16px;
+}
+.cb-single-section .cb-single-right{
+        max-width: 392px;
+    width: 100%;
+    padding: 28px;
+    border-radius: 20px;
+    background-color: #0D0012;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+.cb-single-section .cb-single-right::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 180px;
+    background: url(../img/container-mask.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+.cb-job-info-title{
+font-family: 'Urbanist';
+font-weight: 500;
+font-size: 24px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: capitalize;
+color: #FFFFFF;
+margin-bottom: 12px;
+}
+.cb-job-info-skills .cb-job-info-list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+}
+.cb-job-info-skills .cb-job-info-item{
+    list-style: none;
+font-family: 'Urbanist';
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: capitalize;
+color: #FFFFFF;
+padding-left: 32px;
+position: relative;
+}
+.cb-job-info-skills .cb-job-info-item::before{
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/check-icon.svg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+}
+.cb-job-info-apply-btn{
+        display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+background: #FFFFFF;
+padding: 8px 56px;
+border-radius: 100px;
+font-family: 'Rethink Sans';
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+text-transform: uppercase;
+color: #0D0012;
+border: 1px solid #fff;
+cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+.cb-job-info-apply-btn:hover{
+        background: transparent;
+    color: #fff;
+}
+.cb-salary-range{
+font-family: 'Urbanist';
+font-weight: 500;
+font-size: 20px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: capitalize;
+color: #FFFFFF;
+margin-bottom: 5px;
+}
+.cb-salary-note{
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+color: #FFFFFF;
+opacity: 0.6;
+}
+.cb-employment-type{
+font-family: 'Urbanist';
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: capitalize;
+color: #FFFFFF;
+}
+.cb-single-apply-btn {
+  padding: 14px 20px 14px 84px;
+  background: #161616;
+  border-radius: 8px;
+  border: 0;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #CCD8FF;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cb-single-apply-btn .icon {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  height: 47px;
+  width: 60px;
+background-color: #335FFF;
+background-image: url(../img/apply-icon.svg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: 24px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  /* box-shadow: 0.1em 0.1em 0.6em 0.2em rgba(51, 95, 255, 0.4); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cb-single-apply-btn:hover .icon {
+  width: calc(100% - 8px);
+}
+
+.cb-single-apply-btn:active .icon {
+  transform: scale(0.95);
+}
+
+.cb-archive-footer-image-top{
+        position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: none;
+  z-index: 3;
+    pointer-events: none;
+}
+.cb-archive-footer-image-top img{
+    width: 100%;
+}
+@media (max-width:1024px) {
+    .cb-single-hero-title {
+        font-size: 52px;
+        text-align: center;
+    }
+    .cb-single-hero{
+        padding: 170px 16px 80px 16px;
+    }
+    .cb-single-hero .cb-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .cb-single-hero-subtitle{
+font-weight: 700;
+font-size: 18px;
+line-height: 120%;
+background: linear-gradient(180deg, #335FFF 0%, #1A4BFF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+    }
+    .cb-single-section .cb-container{
+        flex-direction: column-reverse;
+    }
+    .cb-single-section .cb-single-left, .cb-single-section .cb-single-right{
+        max-width: 100%;
+    }
+    .cb-single-section{
+        padding: 80px 16px;
+    }
+    .cb-single-left-title{
+        font-size: 32px;
+    }
+    .cb-single-description p{
+        margin-bottom: 24px;
+    }
+}

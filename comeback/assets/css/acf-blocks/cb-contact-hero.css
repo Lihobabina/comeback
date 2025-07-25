@@ -1,0 +1,25 @@
+.cb-contact-hero{
+    background-color: #040308;
+    padding: 220px 16px 120px 16px;
+    position: relative;
+}
+.cb-contact-hero-title{
+font-family: 'Rethink Sans';
+font-weight: 700;
+font-size: 100px;
+line-height: 120%;
+text-align: center;
+text-transform: capitalize;
+color: #FFFFFF;
+}
+@media (max-width:1024px) {
+    .cb-contact-hero{
+        padding: 170px 16px 80px 16px;
+    }
+    .cb-archive-section{
+        padding: 80px 16px;
+    }
+    .cb-archive-section-title{
+        font-size: 32px;
+    }
+}

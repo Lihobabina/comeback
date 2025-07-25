@@ -1,0 +1,83 @@
+.cb-home-process-steps {
+    padding: 150px 16px;
+    background-color: #0D0012;
+}
+
+.cb-home-process-steps-title {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 120%;
+    color: #fff;
+    width: 100%;
+    max-width: 640px;
+    margin-bottom: 40px;
+}
+
+.cb-home-process-steps .cb-process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cb-home-process-steps .cb-process-step {
+    width: calc(50% - 15px);
+    background-color: #1C2354;
+    padding: 32px;
+    border-radius: 20px;
+    background-image: url(../../img/process-step-bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% calc(100% - 39px);
+}
+
+.cb-home-process-steps .cb-process-step-number {
+    font-family: 'Subway Berlin OT', sans-serif;
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 120px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.cb-home-process-steps .cb-process-step-title {
+    margin-top: 24px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 50px;
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .cb-home-process-steps {
+        padding: 80px 16px;
+    }
+
+    .cb-home-process-steps-title {
+        font-size: 32px;
+        max-width: 360px;
+        font-weight: 700;
+    }
+
+    .cb-home-process-steps .cb-process-steps {
+        gap: 16px;
+    }
+
+    .cb-home-process-steps .cb-process-step {
+        width: 100%;
+        padding: 24px;
+        background-size: 100% calc(100% - 49px);
+    }
+
+    .cb-home-process-steps .cb-process-step-number {
+        font-size: 100px;
+        line-height: 100px;
+    }
+
+    .cb-home-process-steps .cb-process-step-title {
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+}

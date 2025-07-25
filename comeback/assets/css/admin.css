@@ -1,0 +1,7 @@
+#adminmenu #toplevel_page_cb-site-options-menu .wp-menu-image img {
+    display: block;
+    width: 20px;
+    height: 100%;
+    padding: 0;
+    padding-left: 8px;
+}

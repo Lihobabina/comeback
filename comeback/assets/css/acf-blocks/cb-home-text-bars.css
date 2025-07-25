@@ -1,0 +1,67 @@
+.cb-home-text-bars {
+    background-color: #0D0012;
+    position: relative;
+    overflow: hidden visible;
+    height: 200px;
+}
+
+.cb-rear-text-bar {
+    background-color: #ffffff1a;
+    padding: 16px 12px;
+    transform: rotate(5deg) translate(-10px, -50%);
+    position: absolute;
+    width: calc(100vw + 20px);
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transition: transform .8s linear;
+}
+
+.cb-front-text-bar {
+    background-color: #6868cf;
+    padding: 16px 12px;
+    transform: rotate(-5deg) translate(-10px, -50%);
+    box-shadow: 0px 0px 25px 0px #00000080;
+    position: absolute;
+    z-index: 2;
+    width: calc(100vw + 20px);
+    left: 0;
+    top: 50%;
+    transition: transform .8s linear, top .8s linear;
+}
+
+.cb-home-text-bars.cb-animated-text-bars .cb-rear-text-bar {
+    transform: none;
+}
+
+.cb-home-text-bars.cb-animated-text-bars .cb-front-text-bar {
+    transform: none;
+    top: 0;
+}
+
+.cb-rear-text-bar p,
+.cb-front-text-bar p {
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+    leading-trim: Cap height;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+    .cb-home-text-bars {
+        height: 100px;
+    }
+
+    .cb-rear-text-bar,
+    .cb-front-text-bar {
+        padding: 10px;
+    }
+
+    .cb-rear-text-bar p,
+    .cb-front-text-bar p {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,193 @@
+.cb-home-subscription-form {
+    padding: 150px 16px 110px;
+    background-color: #0D0012;
+}
+
+.cb-home-subscription-form .cb-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.cb-home-subscription-form .cb-form-wrapper {
+    width: 444px;
+}
+
+.cb-home-subscription-form .cb-form-title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    margin-bottom: 14px;
+    color: #fff;
+}
+
+.cb-home-subscription-form .cb-form-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 32px;
+    color: #ffffffcc;
+}
+
+.cb-home-subscription-form .cb-form-input-wrapper {
+    position: relative;
+    margin-bottom: 32px;
+    max-width: 348px;
+    width: 100%;
+}
+
+.cb-home-subscription-form .cb-form-input-wrapper:before {
+    content: '';
+    display: block;
+    background-image: conic-gradient(from var(--cb-gradient-rotation-angle), #6673CC 0, #26307300 32deg, #A0ABF8 360deg, #FFFFFF00 360deg);
+    z-index: 0;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-radius: 12px;
+    animation: cb-gradient-rotation 4s linear infinite;
+}
+
+.cb-home-subscription-form .cb-form-input {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #fff;
+    padding: 15px 16px;
+    border: none;
+    background-color: #252525;
+    border-radius: 12px;
+    width: 100%;
+    display: block;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.cb-home-subscription-form .cb-form-input::placeholder {
+    color: #ffffff99;
+}
+
+.cb-home-subscription-form .cb-form-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    margin-bottom: 40px;
+}
+
+.cb-home-subscription-form .cb-form-checkboxes .cb-form-label {
+    width: calc(50% - 16px);
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cb-home-subscription-form .cb-form-checkboxes .cb-form-label input {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    margin-right: 8px;
+    background-color: transparent;
+    appearance: none;
+}
+
+.cb-home-subscription-form .cb-form-checkboxes .cb-form-label input:checked {
+    background-color: #fff;
+}
+
+.cb-home-subscription-form .cb-embed-wrapper {
+    width: auto;
+    max-width: calc(100% - 484px);
+    max-height: 500px;
+}
+
+.cb-home-subscription-form .cb-form-submit {
+    display: block;
+    padding: 1px;
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.cb-home-subscription-form .cb-form-submit:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--cb-gradient-rotation-angle), #A0ABF8 0, #00000000 300deg, #00000000 360deg, #00000000 360deg);
+    animation: cb-gradient-rotation 3s linear infinite;
+}
+
+.cb-home-subscription-form .cb-form-submit span {
+    display: block;
+    border: 1px solid transparent;
+    border-image: radial-gradient(62.22% 62.22% at 31.73% 0%, #A0ABF8 0%, rgba(255, 255, 255, 0) 40%) 1;
+    background-color: #335FFF;
+    transition: background-color .3s;
+    outline: none;
+    padding: 11px 15px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+    border-radius: 100px;
+    cursor: pointer;
+    background-image: url(../../img/button-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top;
+    position: relative;
+    z-index: 3;
+}
+
+.cb-home-subscription-form .cb-form-submit:hover span {
+    background-color: #131839;
+}
+
+@media screen and (max-width: 1024px){
+    .cb-home-subscription-form {
+        padding: 80px 16px;
+    }
+
+    .cb-home-subscription-form .cb-container {
+        display: block;
+    }
+
+    .cb-home-subscription-form .cb-form-wrapper {
+        width: 100%;
+    }
+
+    .cb-home-subscription-form .cb-form-title {
+        font-size: 32px;
+        margin-bottom: 16px;
+        font-weight: 700;
+    }
+
+    .cb-home-subscription-form .cb-form-input-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .cb-home-subscription-form .cb-form-checkboxes {
+        margin-bottom: 32px;
+    }
+
+    .cb-home-subscription-form .cb-embed-wrapper {
+        display: none;
+    }
+}

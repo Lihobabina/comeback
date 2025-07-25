@@ -1,0 +1,231 @@
+.cb-contact-form-section{
+    background-color: #f7f7f7;
+    padding: 220px 16px 120px 16px;
+    position: relative;
+}
+.cb-contact-form-image-bottom{
+    position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: none;
+  z-index: 3;
+  pointer-events: none;
+}
+.cb-contact-form-footer-image-top{
+        position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: none;
+  z-index: 3;
+    pointer-events: none;
+}
+.cb-contact-form-image-bottom img,.cb-contact-form-footer-image-top img{
+    width: 100%;
+}
+.cb-contact-form-section .cb-container{
+    display: flex;
+    justify-content: space-between;
+}
+.cb-contact-form-left{
+    max-width: 582px;
+    width: 100%;
+}
+.cb-contact-form-title{
+font-family: 'Rethink Sans';
+font-weight: 500;
+font-size: 64px;
+line-height: 120%;
+text-transform: capitalize;
+color: #161616;
+margin-bottom: 16px;
+}
+.cb-contact-form-text{
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 18px;
+line-height: 140%;
+color: #161616;
+margin-bottom: 32px;
+}
+.cb-form .cb-input{
+    padding: 16px;
+background: #1C2354;
+border-radius: 12px;   
+outline: none;
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+color: #fff;
+border: 1px solid;
+border-image-source: radial-gradient(62.22% 62.22% at 31.73% 0%, #6673CC 0%, rgba(38, 48, 115, 0) 100%) ,
+radial-gradient(62.22% 62.22% at 31.73% 0%, #A0ABF8 0%, rgba(255, 255, 255, 0) 100%) ;
+}
+.cb-form .cb-input::placeholder, .cb-form .cb-textarea::placeholder{
+    font-family: 'Rethink Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+color: #fff;
+}
+.cb-form .cb-textarea{
+    height: 140px;
+    width: 100%;
+    padding: 16px;
+background: #1C2354;
+border-radius: 12px;   
+outline: none;
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+color: #fff;
+border: 1px solid;
+border-image-source: radial-gradient(62.22% 62.22% at 31.73% 0%, #6673CC 0%, rgba(38, 48, 115, 0) 100%) ,
+radial-gradient(62.22% 62.22% at 31.73% 0%, #A0ABF8 0%, rgba(255, 255, 255, 0) 100%) ;
+resize: none;
+}
+.cb-form-row{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.cb-form-row:last-of-type{
+    margin: 0;
+}
+.cb-upload-row{
+    margin-bottom: 40px;
+}
+.cb-form .cb-input.full{
+    width: 100%;
+}
+.cb-form .cb-input.half{
+    width: 50%;
+}
+.cb-btn-submit{
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #161616;
+    cursor: pointer;
+font-family: 'Rethink Sans';
+font-weight: 600;
+font-size: 18px;
+line-height: 150%;
+text-align: center;
+color: #CCD8FF;
+transition: 0.3s;
+}
+.cb-btn-submit:hover{
+    background-color: #CCD8FF;
+    color: #161616;
+}
+
+.cb-upload-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cb-file-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+leading-trim: both;
+text-edge: cap;
+letter-spacing: -0.02em;
+background: linear-gradient(180deg, #335FFF 0%, #1A4BFF 100%), #000000;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+.cb-file-text{
+    display: flex;
+    align-items: center;
+      gap: 8px;
+}
+.cb-file-label input[type="file"] {
+  display: none;
+}
+
+.cb-file-text img {
+  width: 20px;
+  height: 20px;
+}
+
+.cb-file-note {
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+color: #000000;
+opacity: 0.5;
+}
+
+.cb-file-preview-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.cb-file-preview-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  background: #f6f6f6;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.cb-file-preview-list li button {
+  background: none;
+  border: none;
+  color: #ff3b3b;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media (max-width:1024px) {
+    .cb-contact-form-right{
+        display: none;
+    }
+    .cb-contact-form-left{
+        max-width: 100%;
+    }
+    .cb-contact-form-section{
+        padding: 80px 16px;
+    }
+    .cb-contact-form-title{
+        font-size: 32px;
+    }
+    .cb-form-row{
+        flex-direction: column;
+    }
+    .cb-form .cb-input.half{
+        width: 100%;
+    }
+    .cb-upload-row{
+        margin-bottom: 32px;
+    }
+    .cb-contact-hero-title{
+        font-size: 52px;
+    }
+}

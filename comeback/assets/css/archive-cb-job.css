@@ -1,0 +1,526 @@
+.cb-archive-hero{
+    background-color: #040308;
+    padding: 220px 16px 120px 16px;
+    position: relative;
+}
+.cb-archive-hero-title{
+font-family: 'Rethink Sans';
+font-weight: 700;
+font-size: 100px;
+line-height: 120%;
+text-align: center;
+text-transform: capitalize;
+color: #FFFFFF;
+}
+.cb-archive-hero-image-bottom{
+    position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: none;
+  z-index: 3;
+     pointer-events: none;
+}
+.cb-archive-footer-image-top{
+        position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: none;
+  z-index: 3;
+     pointer-events: none;
+}
+.cb-archive-hero-image-bottom img, .cb-archive-footer-image-top img{
+    width: 100%;
+}
+.cb-archive-section{
+    padding: 190px 16px;
+    background: #f7f7f7;
+    position: relative;
+}
+.cb-archive-content-grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    column-gap: 48px;
+}
+.cb-archive-filters{
+    max-width: 392px;
+    width: 100%;
+    padding: 28px;
+    border-radius: 20px;
+    background-color: #0D0012;
+    position: relative;
+}
+.cb-archive-filters::after{
+    content: '';
+    display: block;
+    height: 100%;
+    width: 180px;
+    background: url(../img/container-mask.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+.cb-filter-title{
+font-family: 'Urbanist';
+font-weight: 500;
+font-size: 24px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: capitalize;
+color: #FFFFFF;
+margin-bottom: 12px;
+}
+.cb-btn-reset{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50%;
+background: transparent;
+padding: 8px 56px;
+border-radius: 100px;
+font-family: 'Rethink Sans';
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+border: 1px solid #fff;
+cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+.cb-btn-reset:hover{
+    background: #fff;
+    color: #0D0012;
+}
+.cb-btn-apply{
+    display: flex;
+justify-content: center;
+align-items: center;
+width: 50%;
+background: #FFFFFF;
+padding: 8px 56px;
+border-radius: 100px;
+font-family: 'Rethink Sans';
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+text-transform: uppercase;
+color: #0D0012;
+border: 1px solid #fff;
+cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+.cb-btn-apply:hover{
+    background: transparent;
+    color: #fff;
+}
+.cb-filter-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.cb-filter-group{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+.cb-filter-checkbox input{
+    display: none;
+}
+.cb-filter-checkbox{
+    padding: 6px 10px;
+    background-color: #ABABAB33;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.cb-filter-checkbox span{
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.cb-filter-checkbox.active{
+    color: #fff;
+    background-color: #335FFF;
+    transition: background-color .3s, color .3s;
+    background-image: url(../img/mask_btn_filters.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.cb-archive-posts{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 760px;
+    position: relative;
+}
+.cb-vacancy-item{
+    padding-top: 32px;
+    border-top: 1px solid #00000033;
+}
+.cb-vacancy-item:last-of-type{
+    border-bottom: 1px solid #00000033;
+    padding-bottom: 32px;
+}
+.cb-archive-section-title{
+font-family: 'Rethink Sans';
+font-weight: 500;
+font-size: 64px;
+line-height: 120%;
+text-transform: capitalize;
+color: #161616;
+margin-bottom: 44px;
+}
+.cb-vacancy-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cb-vacancy-title{
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+color: #161616;
+transition: 0.3s;
+}
+.cb-vacancy-title-link{
+    text-decoration: none;
+}
+.cb-vacancy-title-link:hover .cb-vacancy-title{
+color: #1C2354CC;
+}
+.cb-vacancy-apply{
+font-family: 'Urbanist';
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+background: linear-gradient(180deg, #335FFF 0%, #1A4BFF 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+display: flex;
+align-items: center;
+text-decoration: none;
+}
+.cb-vacancy-apply svg{
+    transition: .3s;
+    transform: translateX(8px);
+}
+.cb-vacancy-apply:hover svg{
+    transform: translateX(24px);
+}
+.cb-vacancy-description-block{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.cb-vacancy-excerpt{
+    font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 134%;
+color: #161616;
+opacity: 0.6;
+max-width: 75%;
+}
+.cb-vacancy-meta{
+    display: flex;
+    gap: 16px;
+}
+.cb-vacancy-meta-item{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    height: fit-content;
+}
+.cb-meta-text{
+    white-space: nowrap;
+ font-family: 'Rethink Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+color: #161616;
+}
+.cb-vacancy-category{
+font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 12px;
+line-height: 150%;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+color: #FFFFFF;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 2px 8px;
+background: rgba(28, 35, 84, 0.8);
+border-radius: 24px;
+margin-bottom: 16px;
+width: fit-content;
+}
+.cb-filter-search{
+    padding: 15px 15px 15px 45px;
+    width: 100%;
+    background-color: #252525;
+    border-radius: 12px;
+    border: transparent;
+    outline: none;
+    font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+color: #FFFFFF;
+}
+.cb-filter-search-group{
+    position: relative;
+}
+.cb-filter-search-group::before{
+    content: '';
+    display: block;
+    width: 19px;
+    height: 19px;
+    background: url(../img/search_icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 12px;
+    top: 15px;
+    z-index: 9;
+}
+.cb-filter-search-group {
+  position: relative;
+  border-radius: 14px;
+  padding: 1px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.cb-filter-search-group::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: conic-gradient(
+    from var(--cb-gradient-rotation-angle, 0deg),
+    #252525 0deg,
+    transparent 300deg,
+    #fff 360deg,
+    transparent 360deg
+  );
+  animation: cb-gradient-rotation 6s linear infinite;
+}
+
+.cb-filter-search {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  background-color: #252525;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-family: 'Rethink Sans';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+@keyframes cb-gradient-rotation {
+  0% {
+    --cb-gradient-rotation-angle: 0deg;
+  }
+  100% {
+    --cb-gradient-rotation-angle: 360deg;
+  }
+}
+
+.cb-filter-search::placeholder{
+        font-family: 'Rethink Sans';
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+color: #FFFFFF;
+opacity: 0.6;
+}
+.cb-filter-search:-webkit-autofill,
+.cb-filter-search:-webkit-autofill:hover, 
+.cb-filter-search:-webkit-autofill:focus {
+  -webkit-text-fill-color: #F1F1F1;
+  -webkit-box-shadow: 0 0 0px 1000px #1B1B1C inset;
+  transition: background-color 5000s ease-in-out 0s;
+};
+.cb-archive-posts.loading {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.cb-archive-posts.loading::before{
+    content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+.cb-archive-posts.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px;
+  border: 4px solid #ccc;
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  z-index: 6;
+}
+.cb-vacancy-apply-mob{
+    display: none;
+}
+.cb-show-filters-btn{
+    font-family: 'Rethink Sans';
+font-weight: 700;
+font-size: 20px;
+line-height: 120%;
+color: #FFFFFF;
+background: #1C2354;
+border-radius: 12px;
+padding: 14px;
+border: 0;
+position: fixed;
+bottom: 20px;
+width: calc(100% - 32px);
+z-index: 9;
+display: none;
+}
+.cb-archive-filters-title-mob{
+    display: none;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width:1024px) {
+    .cb-archive-filters{
+        padding: 0;
+        background: transparent;
+    }
+    .cb-archive-posts{
+        max-width: 100%;
+        gap: 16px;
+    }
+    .cb-archive-hero-title{
+        font-size: 52px;
+    }
+    .cb-archive-hero{
+        padding: 170px 16px 80px 16px;
+    }
+    .cb-archive-section{
+        padding: 80px 16px;
+    }
+    .cb-archive-section-title{
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    .cb-vacancy-description-block{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .cb-vacancy-title{
+        font-size: 24px;
+    }
+    .cb-vacancy-item{
+        padding-top: 16px;
+    }
+    .cb-vacancy-excerpt{
+        font-size: 14px;
+    }
+    .cb-vacancy-header .cb-vacancy-apply{
+        display: none;
+    }
+    .cb-vacancy-apply-mob{
+        display: flex;
+        margin-top: 14px;
+    }
+    .cb-vacancy-excerpt{
+        max-width: 100%;
+    }
+    .cb-archive-filters-overlay{
+        background: url(../img/filters-mask.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+       transition: 0.3s;
+        transform: translateX(-120%);
+        position: absolute;
+          top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+    }
+    .cb-archive-filters-overlay.active{
+        position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+          background-color: #0D0012;
+          padding: 32px 16px;
+          transform: translateX(0%);
+    }
+    .cb-archive-filters-title-mob{
+font-family: 'Rethink Sans';
+font-weight: 600;
+font-size: 24px;
+line-height: 120%;
+text-transform: capitalize;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 35px;
+    }
+    .cb-filter-buttons{
+        margin-top: auto;
+    }
+}

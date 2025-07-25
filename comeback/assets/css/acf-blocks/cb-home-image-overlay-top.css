@@ -1,0 +1,11 @@
+.cb-home-image-overlay-top {
+    position: relative;
+    z-index: 3;
+}
+
+.cb-home-image-overlay-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: none;
+}

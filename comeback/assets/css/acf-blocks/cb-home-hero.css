@@ -1,0 +1,121 @@
+.cb-home-hero {
+    min-height: 100vh;
+    background-color: #00020F;
+    padding: 110px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cb-home-hero-bg-wrapper,
+.cb-home-hero-bg-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cb-home-hero-bg-overlay {
+    z-index: 2;
+}
+
+.cb-home-hero > .cb-container {
+    max-width: 964px;
+    z-index: 3;
+}
+
+.cb-home-hero-title {
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 120px;
+    text-align: center;
+    color: #fff;
+}
+
+.cb-home-hero-content {
+    margin-top: 16px;
+    text-align: center;
+    color: #A7ADBE;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.cb-home-hero-button {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin: 40px auto 0;
+    text-decoration: none;
+    color: #fff;
+    padding: 1px;
+    position: relative;
+}
+
+.cb-home-hero-button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--cb-gradient-rotation-angle), #A0ABF8 0, #00000000 300deg, #00000000 360deg, #00000000 360deg);
+    animation: cb-gradient-rotation 3s linear infinite;
+}
+
+.cb-home-hero-button span {
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 11px 15px;
+    background-color: #335FFF;
+    transition: background-color .3s;
+    border-radius: 100px;
+    background-image: url(../../img/button-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top;
+    position: relative;
+    z-index: 3;
+}
+
+.cb-home-hero-button:hover span {
+    background-color: #131839;
+}
+
+@media screen and (max-width: 1024px){
+    .cb-home-hero {
+        background-image: url(../../img/hero-bg.jpg);
+        background-size: cover;
+        background-position: top left;
+        padding: 80px 16px;
+    }
+
+    .cb-home-hero-title {
+        font-weight: 700;
+        font-size: 52px;
+        line-height: 63px;
+    }
+
+    .cb-home-hero-content {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .cb-home-hero-button {
+        margin-top: 32px;
+    }
+
+    .cb-home-hero-bg-wrapper,
+    .cb-home-hero-bg-overlay {
+        display: none;
+    }
+}
