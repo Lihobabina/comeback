@@ -1,0 +1,43 @@
+{
+    "key": "group_682f7803e775d",
+    "title": "Аналітика",
+    "fields": [
+        {
+            "key": "field_682f785f94494",
+            "label": "Опис",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Сюди додаються опції з <a href=\"\/wp-admin\/edit.php?post_type=rquiz&page=rquiz-settings-menu#acf-group_682f5ca0c11ad\">Налаштувань Аналітики<\/a>",
+            "new_lines": "",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rquiz"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1755102590
+}

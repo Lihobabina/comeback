@@ -1,0 +1,253 @@
+{
+    "key": "group_67d30cf665085",
+    "title": "Налаштування Форми",
+    "fields": [
+        {
+            "key": "field_6823824102f26",
+            "label": "Вітальний текст",
+            "name": "rquiz_settings_welcome_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_67d30cf7c9163",
+            "label": "Питання",
+            "name": "rquiz_settings_questions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 1,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Додати Питання",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67d30d77c9164",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Текст питання",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 2,
+                    "placeholder": "Текст Питання",
+                    "new_lines": "",
+                    "parent_repeater": "field_67d30cf7c9163"
+                },
+                {
+                    "key": "field_67d30ddcc9165",
+                    "label": "Тип",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Тип питання: рейтинг чи текстове поле",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "stars": "Оцінка",
+                        "text": "Текст"
+                    },
+                    "default_value": "stars",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_67d30cf7c9163",
+                    "create_options": 0,
+                    "save_options": 0
+                },
+                {
+                    "key": "field_68239369e91a9",
+                    "label": "Обов'язкове?",
+                    "name": "required",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Чи є поле обов'язкове для заповнення",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1,
+                    "parent_repeater": "field_67d30cf7c9163"
+                },
+                {
+                    "key": "field_6823916be91a7",
+                    "label": "Підказка",
+                    "name": "hint",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Коротка підказка, відображається над текстом",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67d30cf7c9163"
+                },
+                {
+                    "key": "field_682391d5e91a8",
+                    "label": "Помилка",
+                    "name": "error",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Текст помилки, відображається якщо поле було не заповнене",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Це обов’язкове питання. Будь ласка, залиште свою оцінку, ваша думка дуже важлива для нас!",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_67d30cf7c9163"
+                }
+            ]
+        },
+        {
+            "key": "field_67d30e23c9166",
+            "label": "Успішна Оцінка",
+            "name": "rquiz_settings_success_rating",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": 1,
+            "max": 5,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "0.1",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67d30ed3c9167",
+            "label": "Успішний Текст",
+            "name": "rquiz_settings_success_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Показується якщо загальна оцінка користувача більша або рівна \"Успішній Оцінці\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Success Lorem Ipsum",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_67d30fe2c9168",
+            "label": "Неуспішний Текст",
+            "name": "rquiz_settings_fail_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Показується якщо загальна оцінка користувача менша за \"Успішну Оцінку\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Fail Lorem Ipsum",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "rquiz-settings-menu"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1755102590
+}

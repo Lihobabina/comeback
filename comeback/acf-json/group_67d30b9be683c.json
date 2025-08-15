@@ -1,0 +1,116 @@
+{
+    "key": "group_67d30b9be683c",
+    "title": "Результати Опитування",
+    "fields": [
+        {
+            "key": "field_67d30c7a0e558",
+            "label": "Оцінка",
+            "name": "rquiz_post_rating",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "max": 5,
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "step": "0.1",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_67d30b9d0e557",
+            "label": "Відповіді",
+            "name": "rquiz_post_answers",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Додати Відповідь",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67d31bc3838aa",
+                    "label": "Питання",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_67d30b9d0e557"
+                },
+                {
+                    "key": "field_67d31c13838ab",
+                    "label": "Відповідь",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_67d30b9d0e557"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "rquiz"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1755102590
+}

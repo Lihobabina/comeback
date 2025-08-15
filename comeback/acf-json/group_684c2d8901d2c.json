@@ -1,7 +1,25 @@
 {
     "key": "group_684c2d8901d2c",
-    "title": "Job Options",
+    "title": "CB Job Options",
     "fields": [
+        {
+            "key": "field_688cb6e57bd1e",
+            "label": "States",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
         {
             "key": "field_684c2d8a04df5",
             "label": "States",
@@ -217,11 +235,11 @@
             "append": ""
         },
         {
-            "key": "field_688245ceb0288",
-            "label": "Hide Main Apply Button",
-            "name": "cs_show_main_apply_button",
+            "key": "field_688cb70b7bd1f",
+            "label": "Form Apply",
+            "name": "",
             "aria-label": "",
-            "type": "true_false",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -230,16 +248,14 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
         },
         {
-            "key": "field_688245e5b0289",
-            "label": "Hide Side Apply Button",
-            "name": "cb_show_side_apply_button",
+            "key": "field_688cba4430167",
+            "label": "Enable Reviews",
+            "name": "cb_enable_reviews",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -251,10 +267,286 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": 1,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable",
+            "ui": 1
+        },
+        {
+            "key": "field_68909990122b0",
+            "label": "Form Title",
+            "name": "cb_form_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "The process of responding to a vacancy",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68909357dda5f",
+            "label": "Name Placeholder",
+            "name": "cb_name_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Your Name",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68909551dda60",
+            "label": "Email Placeholder",
+            "name": "cb_email_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Your Email",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68909839dda61",
+            "label": "Message Placeholder",
+            "name": "cb_message_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Your Message",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_688cc4d94855e",
+            "label": "Apply Now",
+            "name": "cb_apply_now_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_688cba4430167",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Apply Now",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6890923382489",
+            "label": "CV",
+            "name": "cb_cv",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "If you want to give candidates the opportunity to leave СV, leave it on",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_688cba4430167",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable",
+            "ui": 1
+        },
+        {
+            "key": "field_6890987adda62",
+            "label": "CV Label",
+            "name": "cb_cv_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6890923382489",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Attach a CV",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68909ae61ddb4",
+            "label": "CV Instruction",
+            "name": "cb_cv_instruction",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "If you want to give candidates the opportunity to leave СV, leave it on",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6890923382489",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Accepted formats: .pdf, .docx, .odt, .ods, .pptx, .xls\/x, .rtf, .txt.",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_689091af82488",
+            "label": "Video",
+            "name": "cb_video",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "If you want to allow candidates to leave videos, leave it on",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_688cba4430167",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable",
+            "ui": 1
+        },
+        {
+            "key": "field_689098e5dda63",
+            "label": "Video Label",
+            "name": "cb_video_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_689091af82488",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Attach a video (optional)",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68909b571ddb5",
+            "label": "Video Instruction",
+            "name": "cb_video_instruction",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_689091af82488",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Record or upload: .mp4 \/ .mov (max 2 mins)",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -275,5 +567,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753368148
+    "modified": 1754338861
 }

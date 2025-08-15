@@ -1,0 +1,115 @@
+{
+    "key": "group_682f5ca0c11ad",
+    "title": "Налаштування Аналітики",
+    "fields": [
+        {
+            "key": "field_682f5ca2d90cc",
+            "label": "Теги",
+            "name": "rquiz_settings_analytics_tags",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Теги введені тут створять нові опції для кожного опитування",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Додати тег",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_682f62c6d90cd",
+                    "label": "Tag ID",
+                    "name": "id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Ідентифікатор тегу. Підтримуються тільки латинські літери <code>a-z<\/code> та нижнє підкреслення <code>_<\/code>. Зберігається в базі даних",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_682f5ca2d90cc"
+                },
+                {
+                    "key": "field_682f6514d90ce",
+                    "label": "Tag Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Назва тегу<br><br>",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_682f5ca2d90cc"
+                },
+                {
+                    "key": "field_682f6547d90cf",
+                    "label": "Tag Values",
+                    "name": "values",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Варіанти вибору. У кожному рядку по варіанту. Підтримуваний формат: <code>value : Label<\/code> - наприклад: <code>red : Червоний<\/code>. Параметр <code>value<\/code> зберігається в базі даних і підтримує тільки латинські символи <code>a-z<\/code> та нижнє підкреслення <code>_<\/code>",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_682f5ca2d90cc"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "rquiz-settings-menu"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1755102590
+}

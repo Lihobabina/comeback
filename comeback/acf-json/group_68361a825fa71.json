@@ -1,0 +1,121 @@
+{
+    "key": "group_68361a825fa71",
+    "title": "Налаштування Телеграм Боту",
+    "fields": [
+        {
+            "key": "field_68361a835b979",
+            "label": "API",
+            "name": "rquiz_settings_telegram_bot_api",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "API ключ бота. Можна отримати при створенні через @BotFather. З мір безпеки при успішному встановленні ключ збережеться у системі, а поле буде замінене на назву боту",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_683622975b97a",
+            "label": "Webhook",
+            "name": "rquiz_settings_telegram_bot_webhook",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Сторінка яка отримуватиме запити від телеграм боту. Дана сторінка не буде доступна для користувачів",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_683623ad5b97b",
+            "label": "Chat IDs",
+            "name": "rquiz_settings_telegram_bot_chat_ids",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Chat ID користувачів телеграм, яким дозволено виконувати команди з обмеженим доступом. Щоб дізнатись ваш Chat ID у телеграм боті введіть команду <code>\/chat_id<\/code>. З мір безпеки, усі Chat ID будуть зберігатись зашифровано, а у полі буде вказано ваш First Name. Щоб дізнатись чи маєте ви дозвіл, введіть команду <code>\/am_i_in_system<\/code>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Додати Chat ID",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6838b4593490f",
+                    "label": "Chat ID",
+                    "name": "chat_id",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_683623ad5b97b"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "rquiz-settings-menu"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1755102590
+}

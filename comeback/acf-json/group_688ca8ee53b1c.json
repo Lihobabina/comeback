@@ -1,11 +1,11 @@
 {
-    "key": "group_688277e348296",
-    "title": "CB Contact Form Section",
+    "key": "group_688ca8ee53b1c",
+    "title": "CB Job Review",
     "fields": [
         {
-            "key": "field_688277e30aed0",
-            "label": "Title",
-            "name": "cb_contact_form_title",
+            "key": "field_688caad85c1a3",
+            "label": "Name",
+            "name": "name",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -23,11 +23,11 @@
             "append": ""
         },
         {
-            "key": "field_6882784a6286e",
-            "label": "Description",
-            "name": "cb_contact_form_description",
+            "key": "field_688cabc35c1a4",
+            "label": "Email",
+            "name": "email",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "email",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -37,15 +37,34 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_68911c8bc8e38",
-            "label": "Name Placeholder",
-            "name": "cb_contact_form_name",
+            "key": "field_688cabfb5c1a5",
+            "label": "Message",
+            "name": "message",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_688ca8ee5c19f",
+            "label": "Position",
+            "name": "position",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -58,15 +77,14 @@
             },
             "default_value": "",
             "maxlength": "",
-            "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_68911ca6c8e39",
-            "label": "Email Placeholder",
-            "name": "cb_contact_form_email",
+            "key": "field_6890e0da9941a",
+            "label": "Source",
+            "name": "source",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -79,17 +97,45 @@
             },
             "default_value": "",
             "maxlength": "",
-            "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_68911cb4c8e3a",
-            "label": "Position Placeholder",
-            "name": "cb_contact_form_position",
+            "key": "field_688ca90d5c1a0",
+            "label": "Vacancy Relationship",
+            "name": "vacancy_relationship",
             "aria-label": "",
-            "type": "text",
+            "type": "relationship",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "cb-job"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "filters": [
+                "post_type"
+            ],
+            "return_format": "object",
+            "min": 1,
+            "max": 1,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_688caa075c1a1",
+            "label": "CV",
+            "name": "cv",
+            "aria-label": "",
+            "type": "file",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -98,19 +144,18 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "key": "field_68911cc2c8e3b",
-            "label": "Message Placeholder",
-            "name": "cb_contact_form_message",
+            "key": "field_688caacd5c1a2",
+            "label": "Video",
+            "name": "video",
             "aria-label": "",
-            "type": "text",
+            "type": "file",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -119,41 +164,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68911d4a965b9",
-            "label": "Button Text",
-            "name": "cb_contact_form_button_text",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/cb-contact-form-section"
+                "value": "job_reviews"
             }
         ]
     ],
@@ -166,5 +189,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1754340705
+    "modified": 1754326482
 }
