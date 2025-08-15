@@ -55,6 +55,29 @@ line-height: 140%;
 color: #161616;
 margin-bottom: 32px;
 }
+.cb-form{
+    position: relative;
+}
+.cb-form .cb-form-input-wrapper {
+    display: block;
+    padding: 1px;
+    position: relative;
+}
+
+.cb-form .cb-form-input-wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  background-image: conic-gradient(from var(--cb-gradient-rotation-angle), #6673CC 0, #00000000 300deg, #263073 360deg, #00000000 360deg);
+  animation: cb-gradient-rotation 4s linear infinite;
+}
+
 .cb-form .cb-input{
     padding: 16px;
 background: #1C2354;
@@ -65,9 +88,10 @@ font-weight: 400;
 font-size: 16px;
 line-height: 120%;
 color: #fff;
-border: 1px solid;
-border-image-source: radial-gradient(62.22% 62.22% at 31.73% 0%, #6673CC 0%, rgba(38, 48, 115, 0) 100%) ,
-radial-gradient(62.22% 62.22% at 31.73% 0%, #A0ABF8 0%, rgba(255, 255, 255, 0) 100%) ;
+border: 1px solid #1C2354;
+width: 100%;
+position: relative;
+z-index: 3;
 }
 .cb-form .cb-input::placeholder, .cb-form .cb-textarea::placeholder{
     font-family: 'Rethink Sans';
@@ -90,9 +114,11 @@ font-size: 16px;
 line-height: 120%;
 color: #fff;
 border: 1px solid;
-border-image-source: radial-gradient(62.22% 62.22% at 31.73% 0%, #6673CC 0%, rgba(38, 48, 115, 0) 100%) ,
-radial-gradient(62.22% 62.22% at 31.73% 0%, #A0ABF8 0%, rgba(255, 255, 255, 0) 100%) ;
 resize: none;
+width: 100%;
+position: relative;
+z-index: 3;
+border: 1px solid #1C2354;
 }
 .cb-form-row{
     display: flex;
@@ -106,10 +132,11 @@ resize: none;
 .cb-upload-row{
     margin-bottom: 40px;
 }
-.cb-form .cb-input.full{
+.cb-form .cb-form-input-wrapper.full{
     width: 100%;
+    max-height: 142px;
 }
-.cb-form .cb-input.half{
+.cb-form .cb-form-input-wrapper.half{
     width: 50%;
 }
 .cb-btn-submit{
@@ -126,6 +153,8 @@ line-height: 150%;
 text-align: center;
 color: #CCD8FF;
 transition: 0.3s;
+position: relative;
+z-index: 4;
 }
 .cb-btn-submit:hover{
     background-color: #CCD8FF;
@@ -147,14 +176,7 @@ font-family: 'Rethink Sans';
 font-weight: 400;
 font-size: 16px;
 line-height: 100%;
-leading-trim: both;
-text-edge: cap;
-letter-spacing: -0.02em;
-background: linear-gradient(180deg, #335FFF 0%, #1A4BFF 100%), #000000;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
-text-fill-color: transparent;
+color: #335FFF;
 }
 .cb-file-text{
     display: flex;
@@ -203,6 +225,31 @@ opacity: 0.5;
   font-size: 16px;
   cursor: pointer;
 }
+
+.cb-loader {
+position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #ddd;
+  border-top: 3px solid #333;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 @media (max-width:1024px) {
     .cb-contact-form-right{
         display: none;
@@ -219,7 +266,7 @@ opacity: 0.5;
     .cb-form-row{
         flex-direction: column;
     }
-    .cb-form .cb-input.half{
+    .cb-form .cb-form-input-wrapper.half{
         width: 100%;
     }
     .cb-upload-row{

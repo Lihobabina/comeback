@@ -8,7 +8,61 @@ if( !function_exists('cb_enqueue_scripts') ){
             [],
             filemtime(COMEBACK_THEME_DIR . '/assets/css/style.css')
         );
-
+		 wp_enqueue_script(
+        'pace-js',
+        'https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js',
+        [],
+        null,
+        true
+    );
+		
+    wp_enqueue_style(
+        'pace-theme-default',
+        'https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-flash.min.css',
+        [],
+        null
+    );
+        wp_enqueue_script(
+        'animejs',
+        'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js',
+         ['jquery'],
+        null,
+        true
+        );
+        if (is_page('contact-us')) {
+            wp_enqueue_script(
+            'cb-contact-form-section',
+            COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-contact-form-section.js',
+            [],
+            null,
+            true
+            );
+            
+            wp_localize_script('cb-contact-form-section', 'cbFormAjax', [
+                'ajax_url' => admin_url('admin-ajax.php'),
+                'nonce'    => wp_create_nonce('cb_form_nonce'),
+            ]);	
+        }
+        if (is_front_page()) {
+            wp_enqueue_script(
+                'cb-home-subscription-form',
+                COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-home-subscription-form.js',
+                [],
+                null,
+                true
+            );
+wp_enqueue_script(
+            'cb-home-locations-and-jobs',
+            COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-home-locations-and-jobs.js',
+            [],
+            null,
+            true
+            );
+            wp_localize_script('cb-home-subscription-form', 'cbFormAjax', [
+                'ajax_url' => admin_url('admin-ajax.php'),
+                'nonce'    => wp_create_nonce('cb_form_nonce'),
+            ]);
+        }
         wp_enqueue_script(
             'cb-main',
             COMEBACK_THEME_URL . '/assets/js/script.js',
@@ -16,14 +70,57 @@ if( !function_exists('cb_enqueue_scripts') ){
             filemtime(COMEBACK_THEME_DIR . '/assets/js/script.js'),
             true
         );
-  if (is_singular('cb-job')) {
-        wp_enqueue_style(
-            'cb-job-single',
-            COMEBACK_THEME_URL . '/assets/css/single-cb-job.css',
-            [],
-            filemtime(COMEBACK_THEME_DIR . '/assets/css/single-cb-job.css')
-        );
-    }
+        if (is_singular('cb-job')) {
+            wp_enqueue_style(
+                'cb-job-single',
+                COMEBACK_THEME_URL . '/assets/css/single-cb-job.css',
+                [],
+                filemtime(COMEBACK_THEME_DIR . '/assets/css/single-cb-job.css')
+            );
+            wp_enqueue_style(
+                'cb-job-single-form',
+                COMEBACK_THEME_URL . '/assets/css/single-cb-job-form.css',
+                [],
+                filemtime(COMEBACK_THEME_DIR . '/assets/css/single-cb-job.css')
+            );
+            wp_enqueue_script(
+                    'cb-job-single-form-script',
+                    COMEBACK_THEME_URL . '/assets/js/single-form.js',
+                    ['jquery'],
+                    filemtime(COMEBACK_THEME_DIR . '/assets/js/single-form.js'),
+                    true
+            );
+            global $post;
+            wp_localize_script('cb-job-single-form-script', 'cbFormData', [
+                'ajaxurl' => admin_url('admin-ajax.php'),
+                'security' => wp_create_nonce('cb_form_nonce'),
+                'vacancy_post_id'      => $post->ID,
+                'vacancy_post_title'   => get_the_title($post),
+            ]);
+        }
+		if ( is_front_page() || is_page('contact-us') ) {
+   $spline_data = [
+    'baseUrl' => get_template_directory_uri() . '/assets/spline/'
+];
+
+wp_enqueue_script(
+    'spline-robot-init',
+    get_template_directory_uri() . '/assets/js/spline/robot-init.js',
+    [],
+    null,
+    true
+);
+wp_localize_script('spline-robot-init', 'splineData', $spline_data);
+
+wp_enqueue_script(
+    'home-hero-init',
+    get_template_directory_uri() . '/assets/js/spline/home-hero-init.js',
+    [],
+    filemtime(get_template_directory() . '/assets/js/spline/home-hero-init.js'),
+    true
+);
+wp_localize_script('home-hero-init', 'splineData', $spline_data); 
+}
         if ( is_post_type_archive('cb-job') ) {
             wp_enqueue_style(
                 'cb-jobs-archive',
@@ -43,16 +140,17 @@ if( !function_exists('cb_enqueue_scripts') ){
             wp_localize_script('cb-ajax-filters', 'cb_ajax_obj', [
                 'ajaxurl' => admin_url('admin-ajax.php'),
             ]);
+
         }
     }
 }
+add_action('wp_enqueue_scripts', 'cb_enqueue_scripts');
 
 if( !function_exists('cb_admin_enqueue_scripts') ){
     function cb_admin_enqueue_scripts(){
         wp_enqueue_style( 'cb-main', COMEBACK_THEME_URL . '/assets/css/admin.css', [], filemtime(COMEBACK_THEME_DIR . '/assets/css/admin.css') );
     }
 }
-require_once COMEBACK_THEME_DIR . '/assets/ajax/filter-vacancies.php';
 
 if( !function_exists('cb_register_nav_menus') ){
     function cb_register_nav_menus(){
@@ -60,6 +158,7 @@ if( !function_exists('cb_register_nav_menus') ){
             'header' => 'Header',
             'footer-1' => 'Footer 1',
             'footer-2' => 'Footer 2',
+            'mobile'    => 'Mobile Menu',
         ]);
     }
 }
@@ -141,4 +240,3 @@ if( !function_exists('cb_add_theme_settings_options_page') ){
     }
 }
 
-?>

@@ -2,7 +2,6 @@
 
 <?php
 $hero_title = get_field('cb_theme_settings_archive_page_title', 'cb-theme-settings');
-$image_bottom = get_field('cb_theme_settings_archive_image_bottom', 'cb-theme-settings');
 $section_title = get_field('cb_theme_settings_archive_section_title', 'cb-theme-settings');
 ?>
 
@@ -15,11 +14,9 @@ $section_title = get_field('cb_theme_settings_archive_section_title', 'cb-theme-
 </section>
 
 <section class="cb-archive-section">
-    <?php if ($image_bottom): ?>
   <div class="cb-archive-hero-image-bottom">
 <img src="<?= COMEBACK_THEME_URL; ?>/assets/img/hero-image-bottom.png" alt="">
     </div>
-  <?php endif; ?>
   <div class="cb-container">
     <?php if ($section_title): ?>
     <h2 class="cb-archive-section-title"><?= esc_html($section_title); ?></h2>
@@ -50,74 +47,65 @@ Vacancies
       </div>
     </div>
 
+    <?php
+$job_categories = get_terms([
+    'taxonomy' => 'cb-job-category',
+    'hide_empty' => true,
+]);
+if (!empty($job_categories) && !is_wp_error($job_categories)) : ?>
     <div class="cb-filter-block">
-      <h3 class="cb-filter-title">Category</h3>
-      <div class="cb-filter-group">
-        <?php
-        $job_categories = get_terms([
-          'taxonomy' => 'cb-job-category',
-          'hide_empty' => true,
-        ]);
-
-        if (!empty($job_categories) && !is_wp_error($job_categories)) :
-          foreach ($job_categories as $term) :
-        ?>
-            <label class="cb-filter-checkbox">
-              <input type="checkbox" name="cb-job-category[]" value="<?= esc_attr($term->slug); ?>" <?= (isset($_GET['cb-job-category']) && in_array($term->slug, (array) $_GET['cb-job-category'])) ? 'checked' : ''; ?>>
-              <span><?= esc_html($term->name); ?></span>
-            </label>
-        <?php
-          endforeach;
-        endif;
-        ?>
-      </div>
+        <h3 class="cb-filter-title">Category</h3>
+        <div class="cb-filter-group">
+            <?php foreach ($job_categories as $term) : ?>
+                <label class="cb-filter-checkbox">
+                    <input type="checkbox" name="cb-job-category[]" value="<?= esc_attr($term->slug); ?>" <?= (isset($_GET['cb-job-category']) && in_array($term->slug, (array) $_GET['cb-job-category'])) ? 'checked' : ''; ?>>
+                    <span><?= esc_html($term->name); ?></span>
+                </label>
+            <?php endforeach; ?>
+        </div>
     </div>
+<?php endif; ?>
 
+
+<?php
+$employment_terms = get_terms([
+    'taxonomy' => 'employment',
+    'hide_empty' => true,
+]);
+if (!empty($employment_terms) && !is_wp_error($employment_terms)) : ?>
     <div class="cb-filter-block">
-      <h3 class="cb-filter-title">Employment</h3>
-      <div class="cb-filter-group">
-        <?php
-        $employment_terms = get_terms([
-          'taxonomy' => 'employment',
-          'hide_empty' => true,
-        ]);
-
-        if (!empty($employment_terms) && !is_wp_error($employment_terms)) :
-          foreach ($employment_terms as $term) :
-        ?>
-            <label class="cb-filter-checkbox">
-              <input type="checkbox" name="employment[]" value="<?= esc_attr($term->slug); ?>" <?= (isset($_GET['employment']) && in_array($term->slug, (array) $_GET['employment'])) ? 'checked' : ''; ?>>
-              <span><?= esc_html($term->name); ?></span>
-            </label>
-        <?php
-          endforeach;
-        endif;
-        ?>
-      </div>
+        <h3 class="cb-filter-title">Employment</h3>
+        <div class="cb-filter-group">
+            <?php foreach ($employment_terms as $term) : ?>
+                <label class="cb-filter-checkbox">
+                    <input type="checkbox" name="employment[]" value="<?= esc_attr($term->slug); ?>" <?= (isset($_GET['employment']) && in_array($term->slug, (array) $_GET['employment'])) ? 'checked' : ''; ?>>
+                    <span><?= esc_html($term->name); ?></span>
+                </label>
+            <?php endforeach; ?>
+        </div>
     </div>
+<?php endif; ?>
 
+
+<?php
+$english_terms = get_terms([
+    'taxonomy' => 'english_level',
+    'hide_empty' => true,
+]);
+if (!empty($english_terms) && !is_wp_error($english_terms)) : ?>
     <div class="cb-filter-block">
-      <h3 class="cb-filter-title">English</h3>
-      <div class="cb-filter-group">
-        <?php
-        $english_terms = get_terms([
-          'taxonomy' => 'english_level',
-          'hide_empty' => true,
-        ]);
-
-        if (!empty($english_terms) && !is_wp_error($english_terms)) :
-          foreach ($english_terms as $term) :
-        ?>
-            <label class="cb-filter-checkbox">
-              <input type="checkbox" name="english_level[]" value="<?= esc_attr($term->slug); ?>" <?= (isset($_GET['english_level']) && in_array($term->slug, (array) $_GET['english_level'])) ? 'checked' : ''; ?>>
-              <span><?= esc_html($term->name); ?></span>
-            </label>
-        <?php
-          endforeach;
-        endif;
-        ?>
-      </div>
+        <h3 class="cb-filter-title">English</h3>
+        <div class="cb-filter-group">
+            <?php foreach ($english_terms as $term) : ?>
+                <label class="cb-filter-checkbox">
+                    <input type="checkbox" name="english_level[]" value="<?= esc_attr($term->slug); ?>" <?= (isset($_GET['english_level']) && in_array($term->slug, (array) $_GET['english_level'])) ? 'checked' : ''; ?>>
+                    <span><?= esc_html($term->name); ?></span>
+                </label>
+            <?php endforeach; ?>
+        </div>
     </div>
+<?php endif; ?>
+
 
     <div class="cb-filter-buttons">
       <button type="reset" class="cb-btn cb-btn-reset">Reset</button>

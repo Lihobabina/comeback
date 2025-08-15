@@ -42,7 +42,7 @@ $acf_blocks = [
         'keywords' => ['jobs', 'locations'],
         'mode' => 'edit',
         'enqueue_style' => COMEBACK_THEME_URL . '/assets/css/acf-blocks/cb-home-locations-and-jobs.css',
-        'enqueue_script' => COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-home-locations-and-jobs.js',
+//         'enqueue_script' => COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-home-locations-and-jobs.js',
     ],
     [
         'name' => 'cb_home_image_overlay_bottom',
@@ -66,7 +66,7 @@ $acf_blocks = [
         'keywords' => ['subscription', 'form'],
         'mode' => 'edit',
         'enqueue_style' => COMEBACK_THEME_URL . '/assets/css/acf-blocks/cb-home-subscription-form.css',
-        'enqueue_script' => COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-home-subscription-form.js',
+        // 'enqueue_script' => COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-home-subscription-form.js',
     ],
     [
         'name' => 'cb_home_text_bars',
@@ -149,7 +149,7 @@ $acf_blocks = [
             'keywords'          => ['contact', 'form'],
             'mode'              => 'edit',
             'enqueue_style'     => get_template_directory_uri() . '/assets/css/acf-blocks/cb-contact-form-section.css',
-            'enqueue_script' => COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-contact-form-section.js',
+            // 'enqueue_script' => COMEBACK_THEME_URL . '/assets/js/acf-blocks/cb-contact-form-section.js',
         ]
 ];
 

@@ -6,9 +6,15 @@
     <?php wp_head() ?>
 </head>
 <body>
+	<div id="preloader">
+    <img src="<?php echo COMEBACK_THEME_URL . '/assets/img/preloader-logo.png'; ?>" alt="Prealoader Logo" />
+  </div>
     <header class="cb-header">
         <div class="cb-header-container">
-            <?= get_custom_logo() ?: '<a href="' . home_url('/') . '" class="cb-header-logo"><img src="' . COMEBACK_THEME_URL . '/assets/img/logo-cba-white.svg" alt="Site Logo"></a>' ?>
+           <?php echo '<a href="' . home_url('/') . '" class="cb-header-logo">
+  <img class="a-logo__icon" src="' . COMEBACK_THEME_URL . '/assets/img/cb-logo-icon.svg" alt="Site Logo">
+  <span class="js-anim-text a-logo__text">Come back</span>
+</a>'; ?>
 
             <?php wp_nav_menu([
                 'theme_location' => 'header',
@@ -52,24 +58,28 @@
 
     <nav class="cb-mobile-nav">
       <?php wp_nav_menu([
-        'theme_location' => 'header',
+        'theme_location' => 'mobile',
         'container' => false,
         'menu_class' => 'cb-mobile-menu-list',
         'depth' => 1
       ]); ?>
     </nav>
 
-    <div class="cb-mobile-socials">
-      <a href="#" class="cb-mobile-social" target="_blank" rel="noopener">
-        <img src="<?= esc_url(COMEBACK_THEME_URL . '/assets/img/icon-fb.svg') ?>" alt="Facebook">
+    <?php if (have_rows('cb_theme_settings_header_mobile_social_links', 'cb-theme-settings')) : ?>
+  <div class="cb-mobile-socials">
+    <?php while (have_rows('cb_theme_settings_header_mobile_social_links', 'cb-theme-settings')) : the_row();
+      $link = get_sub_field('link');
+      $icon = get_sub_field('icon');
+      if ($link && $icon) :
+    ?>
+      <a href="<?= $link; ?>" class="cb-mobile-social" target="_blank" rel="noopener">
+        <img src="<?= $icon; ?>" alt="">
       </a>
-      <a href="#" class="cb-mobile-social" target="_blank" rel="noopener">
-        <img src="<?= esc_url(COMEBACK_THEME_URL . '/assets/img/icon-insta.svg') ?>" alt="Instagram">
-      </a>
-      <a href="#" class="cb-mobile-social" target="_blank" rel="noopener">
-        <img src="<?= esc_url(COMEBACK_THEME_URL . '/assets/img/icon-youtube.svg') ?>" alt="YouTube">
-      </a>
-    </div>
+    <?php endif; endwhile; ?>
+  </div>
+<?php endif; ?>
+
   </div>
 </div>
+
 

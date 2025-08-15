@@ -20,6 +20,7 @@
 
 .cb-home-hero-bg-overlay {
     z-index: 2;
+	display:none;
 }
 
 .cb-home-hero > .cb-container {
@@ -56,19 +57,34 @@
 }
 
 .cb-home-hero-button:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    border-radius: 100px;
-    width: 100%;
-    height: 100%;
-    background-image: conic-gradient(from var(--cb-gradient-rotation-angle), #A0ABF8 0, #00000000 300deg, #00000000 360deg, #00000000 360deg);
-    animation: cb-gradient-rotation 3s linear infinite;
+        content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #335FFF;
 }
-
+.cb-home-hero-button::after{
+content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  background-image: conic-gradient(from var(--cb-gradient-rotation-angle), #A0ABF8 0, #00000000 300deg, #00000000 360deg, #00000000 360deg);
+  animation: cb-gradient-rotation 3s linear infinite;
+} 
+.cb-home-hero-bg-wrapper canvas{
+	width:100%!important;
+	height:100%!important;
+}
 .cb-home-hero-button span {
     display: block;
     color: #fff;

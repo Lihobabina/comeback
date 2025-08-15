@@ -5,6 +5,8 @@ jQuery(document).ready(function($){
             speed: 12000,
             loop: true,
             allowTouchMove: false,
+            observeParents: true,
+    observer: true,
             autoplay: {
                 delay: 0,
             },

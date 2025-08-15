@@ -2,7 +2,7 @@
 $locations = get_field('cb_home_locations');
 $locations_button_text = get_field('cb_home_locations_button_text');
 $locations_button_link = get_field('cb_home_locations_button_link');
-
+$show_locations_button = get_field('cb_home_locations_show_locations_button'); 
 $jobs_title = get_field('cb_home_jobs_title');
 $jobs_button_text = get_field('cb_home_jobs_button_text');
 $jobs_button_link = get_field('cb_home_jobs_button_link');
@@ -39,9 +39,8 @@ if($locations){
             } ?>
         </div>
     <?php endif; ?>
-
-    <?php
-    if($locations_button_text) printf(
+<?php
+    if($show_locations_button && $locations_button_text) printf(
         '<div class="cb-container cb-home-locations-button-container"><a href="%s" class="cb-home-locations-button"><span>%s</span></a></div>',
         $locations_button_link ?: '#', $locations_button_text
     );

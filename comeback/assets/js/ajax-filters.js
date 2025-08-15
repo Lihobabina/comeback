@@ -29,15 +29,38 @@ jQuery(function ($) {
     };
   }
 
-  function applyFilters() {
-    $results.addClass('loading');
-    $.post(cb_ajax_obj.ajaxurl, getFilters(), function (response) {
-      if (response.success) {
-        $results.html(response.data);
-      }
-      $results.removeClass('loading');
-    });
-  }
+function applyFilters() {
+  $results.addClass('loading');
+  $.post(cb_ajax_obj.ajaxurl, getFilters(), function (response) {
+    if (response.success) {
+      $results.html(response.data.html);
+
+      const activeTerms = response.data.active_terms;
+
+      ['cb-job-category', 'employment', 'english_level'].forEach(tax => {
+        const active = activeTerms[tax] || [];
+
+        $form.find(`input[name="${tax === 'cb-job-category' ? 'cb-job-category[]' : tax + '[]'}"]`).each(function () {
+          const $checkbox = $(this);
+          const $label = $checkbox.closest('label');
+          const value = $checkbox.val();
+
+          if (active.includes(value)) {
+            $checkbox.prop('disabled', false);
+            $label.show();
+          } else {
+            $checkbox.prop('disabled', true);
+            $checkbox.prop('checked', false);
+            $label.removeClass('active').hide();
+          }
+        });
+      });
+    }
+
+    $results.removeClass('loading');
+  });
+}
+
 
   function closeFiltersAndScroll() {
     if ($(window).width() < 1024) {

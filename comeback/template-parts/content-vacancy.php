@@ -29,10 +29,13 @@ if ($terms && !is_wp_error($terms)) :
 endif;
 ?>
 
-        <?php if ($excerpt || have_rows('cb_job_states')): ?>
+       <?php 
+$excerpt = get_the_excerpt();
+if ($excerpt || have_rows('cb_job_states')): 
+?>
         <div class="cb-vacancy-description-block">
 
-            <?php if ($excerpt = get_the_excerpt()): ?>
+            <?php if ($excerpt): ?>
             <div class="cb-vacancy-excerpt"><?= esc_html($excerpt); ?></div>
             <?php endif; ?>
 
